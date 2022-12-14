@@ -14,6 +14,8 @@ interface User {
   name: string;
 }
 
+type validID = "h" | "m" | "s"
+
 class JWT {
   pub: any;
   priv: any;
@@ -49,14 +51,14 @@ class JWT {
    * @author Z3NTL3 (Efdal) <z3ntl3discord@gmail.com>
    * @description Encrypted JWT token
    */
-  genToken(claims: User): Promise<string> {
+  genToken(claims: User, expiration: Number, expUnit: validID, issuer: string, audience: string): Promise<string> {
     return new Promise(async (resolve) => {
       const jwt = await new jose.EncryptJWT({ claims })
         .setProtectedHeader({ alg: "RSA1_5", enc: "A256GCM" })
         .setIssuedAt()
-        .setIssuer("Pix4 API")
-        .setAudience("api-access")
-        .setExpirationTime("2h")
+        .setIssuer(issuer)
+        .setAudience(audience)
+        .setExpirationTime(`${expiration}${expUnit}`)
         .encrypt(this.priv, this.secret);
 
       return resolve(jwt);

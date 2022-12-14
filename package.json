@@ -1,11 +1,7 @@
 {
   "name": "next-jwt",
-  "version": "1.0.0",
+  "version": "6.0.0",
   "description": "Easy-to-use and secure JWT util",
-  "main": "jwt.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Z3NTL3/next-jwt.git"
@@ -17,18 +13,25 @@
     "jwe",
     "jwt"
   ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "main": "./dist/jwt.js",
+  "types": "./dist/jwt.d.ts",
   "author": "Z3NTL3",
   "license": "See LICENSE.md",
   "bugs": {
     "url": "https://github.com/Z3NTL3/next-jwt/issues"
   },
+  "prepublish": "tsc",
   "homepage": "https://github.com/Z3NTL3/next-jwt#readme",
   "dependencies": {
-    "@types/node": "^18.11.14",
-    "@types/node-jose": "^1.1.10",
-    "jose": "^4.11.1"
+    "jose": "^4.11.1",
+    "next-jwt": "^6.0.0"
   },
   "devDependencies": {
-    "@types/node": "^18.11.14"
+    "@types/node": "^18.11.14",
+    "@types/node-jose": "^1.1.10",
+    "typescript": "^4.9.4"
   }
 }
