@@ -1,6 +1,6 @@
 {
   "name": "nextjwt",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "Easy-to-use and secure JWT util",
   "repository": {
     "type": "git",
@@ -26,7 +26,8 @@
   "prepublish": "tsc",
   "homepage": "https://github.com/Z3NTL3/next-jwt#readme",
   "dependencies": {
-    "jose": "^4.11.1"
+    "jose": "^4.11.1",
+    "nextjwt": "^1.5.3"
   },
   "devDependencies": {
     "@types/node": "^18.11.14",
