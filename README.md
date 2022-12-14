@@ -8,6 +8,7 @@ Private Key needs to be in ``SPKI``
 
 **Used Algorithm:** ``RSA``
 **Encryption:** ``A256GCM``
+**Hash:** ``SHA512``
 
 #### Supports
 - Custom JWT Claims Object
