@@ -124,4 +124,4 @@ class JWT {
 export { JWT };
 ```
 # NPM Lib
-``npm i next-jwt``
+``npm i nextjwt``
