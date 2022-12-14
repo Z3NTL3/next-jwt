@@ -20,7 +20,7 @@ Private Key needs to be in ``SPKI``
 
 # Example
 ```js
-const { JWT } = require('next-jwt')
+const { JWT } = require('nextjwt')
 const { readFileSync } = require('node:fs')
 
 async function test(){
