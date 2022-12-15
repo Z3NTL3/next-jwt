@@ -1,6 +1,6 @@
 # next-jwt
-
-API interface to create encrypted JWT tokens with custom claims and to decrypt.
+NPM library to manage & validate encrypted JSON Web Tokens within simplicity<br><br>
+**Built on top of:** ``jose`` package.
 
 ##### API INFO
 Public Key needs to be in ``PKCS8``<br>
